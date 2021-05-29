@@ -24,116 +24,49 @@
     </header>
     <section>
         <article>
+            <div ng-show class="wapp"></div>
     
-            <form id="formulario01"  method="POST" action="../Controladores/Registrar.php" onsubmit="return validarCamposObligatorios()">
+            <form  id="formulario01"  method="POST" action="../Controladores/Registrar.php" onsubmit="return validarCamposObligatorios()">
             
-                <!-- Grupo: Cedula -->
+                <!-- Grupo: codigo -->
                 <div class="formulario__grupo" id="grupo__cedula">
-                    <label style="color: black" for="cedula" class="formulario__label">Cédula</label>
+                    <label style="color: black" for="cedula" class="formulario__label">Nombre del Libro</label>
                     <div class="formulario__grupo-input">
-                        <input type="text"  name="cedula" id="cedula" placeholder=""
+                        <input type="text"  name="libro" id="libro" placeholder=""
                         onkeyup="return validarCedula(this)"/>
                     </div>
                     <span id="mensajeCedula" class="error"></span>
                     
                 </div>
+                <br>
     
                 <!-- Grupo: Nombres -->
                 <div class="formulario__grupo" id="grupo__nombre">
-                    <label style="color: black" for="nombres" class="formulario__label">Nombre</label>
+                    <label style="color: black" for="nombres" class="formulario__label">ISBN</label>
                     <div class="formulario__grupo-input">
-                        <input type="text"  name="nombres" id="nombres" placeholder=""
+                        <input type="text"  name="isbn" id="isbn" placeholder=""
                         onkeyup="return validarLetras(this)"/>
                         
                     </div>
                     <span id="mensajeNombres" class="error"></span>
                     
                 </div>
+                <br>
     
                 <!-- Grupo: Apellidos -->
                 <div class="formulario__grupo" id="grupo__apellidos">
-                    <label style="color: black"  for="apellidos" class="formulario__label">Apellidos</label>
+                    <label style="color: black"  for="apellidos" class="formulario__label">Numero de Paginas</label>
                     <div class="formulario__grupo-input">
-                        <input type="text"  name="apellidos" id="apellidos" placeholder=""
+                        <input type="text"  name="paginas" id="paginas" placeholder=""
                         onkeyup="return validarApellidos(this)"/>
                         
                     </div>
                     <span id="mensajeApellidos" class="error"></span>
                     
                 </div>
+                <br>
+
                 
-    
-                <!-- Grupo: Correo Electronico -->
-                <div class="formulario__grupo" id="grupo__correo">
-                    <label style="color: black" for="correo" class="formulario__label">Correo Electrónico</label>
-                    <div class="formulario__grupo-input">
-                        <input type="email"  name="correo" id="correo" placeholder=""
-                        onkeyup="return validarCorreo(this)"/>
-                        
-                    </div>
-                    <span id="mensajeCorreo" class="error"></span>
-                    
-                </div>
-    
-                <!-- Grupo: Contraseña -->
-                <div class="formulario__grupo" id="grupo__password">
-                    <label style="color: black"  for="password" class="formulario__label">Contraseña</label>
-                    <div class="formulario__grupo-input">
-                        <input type="password"  name="contrasena" id="contrasena" placeholder=""
-                        onkeyup="return validarContrasena(this)"/>
-                        
-                    </div>
-                    <span id="mensajeContrasena" class="error"></span>
-                    
-                </div>
-    
-    
-                <!-- Grupo: TIpo Teléfono -->
-                <div class="formulario__grupo" id="grupo__tipo">
-                    <label style="color: black"  for="tipo" class="formulario__label">Tipo de Teléfono</label>
-                    <div class="formulario__grupo-input">
-                        <input type="text"  name="tipo" id="tipo" placeholder=""
-                        onkeyup="return validarCorreo(this)"/>
-                        
-                    </div>
-                    <span id="mensajeTipo" class="error"></span>
-                    
-                </div>
-    
-                <!-- Grupo: Teléfono -->
-                <div class="formulario__grupo" id="grupo__telefono">
-                    <label style="color: black"  for="telefono" class="formulario__label">Teléfono</label>
-                    <div class="formulario__grupo-input">
-                        <input type="text" name="telefono" id="telefono" placeholder=""
-                        onkeyup="return validarTelefono(this)"/>
-                        
-                    </div>
-                    <span id="mensajeTelefono" class="error"></span>
-                    
-                </div>
-    
-                <!-- Grupo: Operadora -->
-                <div class="formulario__grupo" id="grupo__Operadora">
-                    <label style="color: black"  for="Operadora" class="formulario__label">Operadora</label>
-                    <div class="formulario__grupo-input">
-                        <input type="text"  name="operadora" id="operadora" placeholder=""
-                        onkeyup="return validarCorreo(this)"/>
-                        
-                    </div>
-                    <span id="mensajeOperadora" class="error"></span>
-                    
-                </div>
-    
-                 <!-- Grupo: Rol -->
-                <div class="formulario__grupo" id="grupo__Operadora">
-                    
-                    <div class="formulario__grupo-input">
-                        <input type="hidden"  name="rol" id="rol" value="user">
-                        
-                    </div>
-                    
-                    
-                </div>
                 
     
                
