@@ -27,13 +27,13 @@
         <article>
             <div ng-show class="wapp"></div>
     
-            <form  id="formulario01"  method="POST" action="../Controladores/Registrar.php" onsubmit="return validarCamposObligatorios()">
+            <form  id="formulario01"  method="POST" action="../Controladores/RegistrarCapitulos.php" onsubmit="return validarCamposObligatorios()">
             
                 <!-- Grupo: codigo -->
                 <div class="formulario__grupo" id="grupo__cedula">
-                    <label style="color: black" for="cedula" class="formulario__label">Nombre del Libro</label>
+                    <label style="color: black" for="cedula" class="formulario__label">Numéro del Capítulo</label>
                     <div class="formulario__grupo-input">
-                        <input type="text"  name="libro" id="libro" placeholder=""
+                        <input type="text"  name="capitulo" id="capitulo" placeholder=""
                         onkeyup="return validarCedula(this)"/>
                     </div>
                     <span id="mensajeCedula" class="error"></span>
@@ -43,28 +43,38 @@
     
                 <!-- Grupo: Nombres -->
                 <div class="formulario__grupo" id="grupo__nombre">
-                    <label style="color: black" for="nombres" class="formulario__label">ISBN</label>
+                    <label style="color: black" for="nombres" class="formulario__label">Título del Capítulo</label>
                     <div class="formulario__grupo-input">
-                        <input type="text"  name="isbn" id="isbn" placeholder=""
+                        <input type="text"  name="titulo" id="titulo" placeholder=""
                         onkeyup="return validarLetras(this)"/>
                         
                     </div>
                     <span id="mensajeNombres" class="error"></span>
-                    
+                    <br>
                 </div>
+                <label style="color: black" for="nombres" class="formulario__label">Selecione el Autor</label>
                 <br>
-    
-                <!-- Grupo: Apellidos -->
-                <div class="formulario__grupo" id="grupo__apellidos">
-                    <label style="color: black"  for="apellidos" class="formulario__label">Numero de Paginas</label>
-                    <div class="formulario__grupo-input">
-                        <input type="text"  name="paginas" id="paginas" placeholder=""
-                        onkeyup="return validarApellidos(this)"/>
-                        
-                    </div>
-                    <span id="mensajeApellidos" class="error"></span>
-                    
-                </div>
+                <br>
+                    <?php
+                    include "../Config/conexionBD.php";
+                    $sql = "SELECT aut_nombre FROM autores";
+                    //echo $sql;
+                    echo '<select name="nombreAutor" id="nombreAutor">';
+                    //cambiar la consulta para puede buscar por ocurrencias de letras
+                    $result = $conn->query($sql);
+                    if ($result->num_rows > 0) {
+                            while($row = $result->fetch_assoc()) {              
+                            echo '<option value="'.$row['aut_nombre'].'">'.$row['aut_nombre'].'</option>';
+                        }    
+                    }
+                    echo'</select>';
+    ?>
+                <div>
+
+                
+
+
+                <br>
                 <br>
 
                 

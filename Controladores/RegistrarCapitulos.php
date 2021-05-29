@@ -39,7 +39,7 @@ $_SESSION['isbn']=$isbn;
   $conn->close();
   
   
-  header("Location: /YungaYunga-Danny-Examen/YungaYunga-Danny-Examen/Vista/AgregarCapitulos.php?isbn=$isbn");
+  header("Location: /YungaYunga-Danny-Examen/YungaYunga-Danny-Examen/Vista/AgregarCapitulos.html");
   ?>
 
  </body>
