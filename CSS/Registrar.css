@@ -1,0 +1,31 @@
+article{
+    width: 900px;
+    height: 520px;
+    background:white;
+    float: right;
+    margin: 50px 170px 50px 0px;
+}
+aside{
+    width: 430px;
+    height: 420px;
+    margin: 20px;
+    background: black;
+    float: left;
+    position: static;
+    z-index: 100;
+    
+}
+video{
+    width: 790px;
+    height: 410px;
+}
+p{
+    text-align: justify;
+}
+#formulario01{
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #666666;
+    width: 500px;
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src=""></script>
+    <title> Menu</title>
+    
+    
+    <link rel="stylesheet" type="text/css" href="../CSS/reglas.css"/>
+    
+    <link rel="stylesheet" type="text/css" href="../CSS/2-columnas.css"/>
+
+    <link rel="stylesheet" type="text/css" href="../CSS/Registrar.css"/>
+    
+</head>
+
+<body style="background-image: url('../Imagenes/fondo5.jpg');" >
+<header></header>
+    <header border="10px">
+        
+        
+        
+    </header>
+    <section>
+        <article>
+    
+            <form id="formulario01"  method="POST" action="../Controladores/Registrar.php" onsubmit="return validarCamposObligatorios()">
+            
+                <!-- Grupo: Cedula -->
+                <div class="formulario__grupo" id="grupo__cedula">
+                    <label style="color: black" for="cedula" class="formulario__label">Cédula</label>
+                    <div class="formulario__grupo-input">
+                        <input type="text"  name="cedula" id="cedula" placeholder=""
+                        onkeyup="return validarCedula(this)"/>
+                    </div>
+                    <span id="mensajeCedula" class="error"></span>
+                    
+                </div>
+    
+                <!-- Grupo: Nombres -->
+                <div class="formulario__grupo" id="grupo__nombre">
+                    <label style="color: black" for="nombres" class="formulario__label">Nombre</label>
+                    <div class="formulario__grupo-input">
+                        <input type="text"  name="nombres" id="nombres" placeholder=""
+                        onkeyup="return validarLetras(this)"/>
+                        
+                    </div>
+                    <span id="mensajeNombres" class="error"></span>
+                    
+                </div>
+    
+                <!-- Grupo: Apellidos -->
+                <div class="formulario__grupo" id="grupo__apellidos">
+                    <label style="color: black"  for="apellidos" class="formulario__label">Apellidos</label>
+                    <div class="formulario__grupo-input">
+                        <input type="text"  name="apellidos" id="apellidos" placeholder=""
+                        onkeyup="return validarApellidos(this)"/>
+                        
+                    </div>
+                    <span id="mensajeApellidos" class="error"></span>
+                    
+                </div>
+                
+    
+                <!-- Grupo: Correo Electronico -->
+                <div class="formulario__grupo" id="grupo__correo">
+                    <label style="color: black" for="correo" class="formulario__label">Correo Electrónico</label>
+                    <div class="formulario__grupo-input">
+                        <input type="email"  name="correo" id="correo" placeholder=""
+                        onkeyup="return validarCorreo(this)"/>
+                        
+                    </div>
+                    <span id="mensajeCorreo" class="error"></span>
+                    
+                </div>
+    
+                <!-- Grupo: Contraseña -->
+                <div class="formulario__grupo" id="grupo__password">
+                    <label style="color: black"  for="password" class="formulario__label">Contraseña</label>
+                    <div class="formulario__grupo-input">
+                        <input type="password"  name="contrasena" id="contrasena" placeholder=""
+                        onkeyup="return validarContrasena(this)"/>
+                        
+                    </div>
+                    <span id="mensajeContrasena" class="error"></span>
+                    
+                </div>
+    
+    
+                <!-- Grupo: TIpo Teléfono -->
+                <div class="formulario__grupo" id="grupo__tipo">
+                    <label style="color: black"  for="tipo" class="formulario__label">Tipo de Teléfono</label>
+                    <div class="formulario__grupo-input">
+                        <input type="text"  name="tipo" id="tipo" placeholder=""
+                        onkeyup="return validarCorreo(this)"/>
+                        
+                    </div>
+                    <span id="mensajeTipo" class="error"></span>
+                    
+                </div>
+    
+                <!-- Grupo: Teléfono -->
+                <div class="formulario__grupo" id="grupo__telefono">
+                    <label style="color: black"  for="telefono" class="formulario__label">Teléfono</label>
+                    <div class="formulario__grupo-input">
+                        <input type="text" name="telefono" id="telefono" placeholder=""
+                        onkeyup="return validarTelefono(this)"/>
+                        
+                    </div>
+                    <span id="mensajeTelefono" class="error"></span>
+                    
+                </div>
+    
+                <!-- Grupo: Operadora -->
+                <div class="formulario__grupo" id="grupo__Operadora">
+                    <label style="color: black"  for="Operadora" class="formulario__label">Operadora</label>
+                    <div class="formulario__grupo-input">
+                        <input type="text"  name="operadora" id="operadora" placeholder=""
+                        onkeyup="return validarCorreo(this)"/>
+                        
+                    </div>
+                    <span id="mensajeOperadora" class="error"></span>
+                    
+                </div>
+    
+                 <!-- Grupo: Rol -->
+                <div class="formulario__grupo" id="grupo__Operadora">
+                    
+                    <div class="formulario__grupo-input">
+                        <input type="hidden"  name="rol" id="rol" value="user">
+                        
+                    </div>
+                    
+                    
+                </div>
+                
+    
+               
+    
+                <input type="submit" id="crear" name="crear" value="Aceptar" />
+                <input  type="reset" id="cancelar" name="cancelar" value="Cancelar" />
+                <input  type="button" onclick="location.href='Index.html'" id="regresar" name="regresar" value="Regresar" />
+    
+            </form>
+
+            
+        </article>
+        
+    </section>
+
+    <section >
+        
+
+    </section>
+
+    
+    
+    <footer>
+        <table>
+            <tr>
+                <td>
+                    <p>Danny Yunga</p>
+                    <p>Universidad Politécnica Salesiana</p>
+                    &copy; Todos los Derechos Resrvados <br/>
+                </td>
+                <td>
+                   <p>Email: <a href="mailto:dannyy25000@gmail.com">dannyy25000@gmail.com</a></p>
+                    <p>Call: <a href="tel:+593939889081">(593) 0939889081</a></p>
+                    
+                    
+                    
+
+                </td>
+                
+            </tr>
+        </table>
+        
+    </footer>
+    
+
+</body>
+
+</html>
