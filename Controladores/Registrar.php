@@ -21,7 +21,7 @@
 
 
 $sql = "INSERT INTO libros VALUES (0, '$libro', '$isbn', '$paginas')";
-$_SESSION['isbn']=$isbn;
+//$_SESSION['isbn']=$isbn;
 
   if ($conn->query($sql) === TRUE) {
   //echo "<p>Se ha creado los datos personales correctamemte!!!</p>";

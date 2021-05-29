@@ -18,6 +18,7 @@
  $isbn = isset($_POST["isbn"]) ? mb_strtoupper(trim($_POST["isbn"]), 'UTF-8') : null;
  $capitulo = isset($_POST["capitulo"]) ? mb_strtoupper(trim($_POST["capitulo"]), 'UTF-8') : null;
  $titulo = isset($_POST["titulo"]) ? mb_strtoupper(trim($_POST["titulo"]), 'UTF-8') : null;
+ $libro = isset($_POST["libro"]) ? mb_strtoupper(trim($_POST["libro"]), 'UTF-8') : null;
 
 
 
@@ -34,7 +35,7 @@ if ($result1->num_rows > 0  ) {
   
 } 
 
-$sql2 = "SELECT lib_codigo FROM libros WHERE lib_isbn = '$isbn';";
+$sql2 = "SELECT lib_codigo FROM libros WHERE lib_nombre = '$libro';";
 
 $result2 = $conn->query($sql2);
 
@@ -68,7 +69,7 @@ $sql = "INSERT INTO capitulos VALUES (0, '$capitulo', '$titulo', '$id_libro', '$
   $conn->close();
   
   
-  header("Location: /YungaYunga-Danny-Examen/YungaYunga-Danny-Examen/Vista/AgregarCapitulos.php?isbn=$isbn");
+  header("Location: /YungaYunga-Danny-Examen/YungaYunga-Danny-Examen/Vista/AgregarCapitulos2.php?");
   ?>
 
  </body>

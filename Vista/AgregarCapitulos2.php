@@ -30,8 +30,20 @@
         <article>
             <div ng-show class="wapp"></div>
     
-            <form  id="formulario01"  method="POST" action="../Controladores/RegistrarCapitulos.php" onsubmit="return validarCamposObligatorios()">
-            
+            <form  id="formulario01"  method="POST" action="../Controladores/RegistrarCapitulos2.php" onsubmit="return validarCamposObligatorios()">
+
+                <!-- Grupo: codigo -->
+                <div class="formulario__grupo" id="grupo__cedula">
+                    <label style="color: black" for="cedula" class="formulario__label">Nombre del Libro</label>
+                    <div class="formulario__grupo-input">
+                        <input type="text"  name="libro" id="libro" placeholder=""
+                        onkeyup="return validarCedula(this)"/>
+                    </div>
+                    <span id="mensajeCedula" class="error"></span>
+                    
+                </div>
+                <br>
+
                 <!-- Grupo: codigo -->
                 <div class="formulario__grupo" id="grupo__cedula">
                     <label style="color: black" for="cedula" class="formulario__label">Numéro del Capítulo</label>
@@ -59,7 +71,7 @@
                 <br>
                 
                     <?php
-                     $isbn = $_GET['isbn'];
+                     //$isbn = $_GET['isbn'];
                     include "../Config/conexionBD.php";
                     $sql = "SELECT aut_nombre FROM autores";
                     //echo $sql;
@@ -81,7 +93,7 @@
                  <br>       
                 <div id="nacion"> </div>
 
-                
+                <input type="hidden" id="isbn" name="isbn" value="<?php echo $isbn ?>" />
 
 
                 <br>

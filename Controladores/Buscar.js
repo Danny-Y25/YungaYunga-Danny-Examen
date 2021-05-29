@@ -1,7 +1,6 @@
 function buscarPorCedula() {
-    var cedula = document.getElementById("cedula").value;
-    var correo = document.getElementById("correo").value;
-    if (cedula == "") {
+    var autor = document.getElementById("autor").value;
+    if (autor == "") {
     document.getElementById("informacion").innerHTML = "";
    
 
@@ -20,7 +19,7 @@ function buscarPorCedula() {
     document.getElementById("informacion").innerHTML = this.responseText;
     }
     };
-    xmlhttp.open("GET","../Controladores/Buscar.php?cedula="+cedula,true);
+    xmlhttp.open("GET","../Controladores/Buscar.php?autor="+autor,true);
     xmlhttp.send();
     }
     return false;
