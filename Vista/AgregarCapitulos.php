@@ -64,6 +64,7 @@
                     $sql = "SELECT aut_nombre FROM autores";
                     //echo $sql;
                     echo '<select name="nombreAutor" id="nombreAutor">';
+                    echo '<option value=""> SELECCIONAR </option>';
                     //cambiar la consulta para puede buscar por ocurrencias de letras
                     $result = $conn->query($sql);
                     if ($result->num_rows > 0) {

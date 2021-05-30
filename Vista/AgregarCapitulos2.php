@@ -35,9 +35,25 @@
                 <!-- Grupo: codigo -->
                 <div class="formulario__grupo" id="grupo__cedula">
                     <label style="color: black" for="cedula" class="formulario__label">Nombre del Libro</label>
-                    <div class="formulario__grupo-input">
-                        <input type="text"  name="libro" id="libro" placeholder=""
-                        onkeyup="return validarCedula(this)"/>
+                    <div >
+                    <?php
+                     //$isbn = $_GET['isbn'];
+                    include "../Config/conexionBD.php";
+                    $sql = "SELECT lib_nombre FROM libros";
+                    //echo $sql;
+                    echo '<select style="text-align-last:center;" name="libro" id="libro">';
+                    echo '<option value=""> SELECCIONAR </option>';
+                    //cambiar la consulta para puede buscar por ocurrencias de letras
+                    $result = $conn->query($sql);
+                    if ($result->num_rows > 0) {
+                            while($row = $result->fetch_assoc()) {              
+                            echo '<option value="'.$row['lib_nombre'].'">'.$row['lib_nombre'].'</option>';
+                        }    
+                    }
+                    echo'</select>';
+                    
+                    
+                    ?>
                     </div>
                     <span id="mensajeCedula" class="error"></span>
                     
@@ -76,6 +92,7 @@
                     $sql = "SELECT aut_nombre FROM autores";
                     //echo $sql;
                     echo '<select name="nombreAutor" id="nombreAutor">';
+                    echo '<option value=""> SELECCIONAR </option>';
                     //cambiar la consulta para puede buscar por ocurrencias de letras
                     $result = $conn->query($sql);
                     if ($result->num_rows > 0) {
@@ -86,7 +103,7 @@
                     echo'</select>';
                     
                     
-    ?>
+                    ?>
                 
                 <div>
                     
