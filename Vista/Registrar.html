@@ -33,8 +33,7 @@
                 <div class="formulario__grupo" id="grupo__cedula">
                     <label style="color: black" for="cedula" class="formulario__label">Nombre del Libro</label>
                     <div class="formulario__grupo-input">
-                        <input type="text"  name="libro" id="libro" placeholder=""
-                        onkeyup="return validarCedula(this)"/>
+                        <input type="text"  name="libro" id="libro" placeholder="" pattern="[A-Za-z0-9ñÑáéíóúÁÉÍÓÚ\s ]+" required >
                     </div>
                     <span id="mensajeCedula" class="error"></span>
                     
@@ -45,8 +44,7 @@
                 <div class="formulario__grupo" id="grupo__nombre">
                     <label style="color: black" for="nombres" class="formulario__label">ISBN</label>
                     <div class="formulario__grupo-input">
-                        <input type="text"  name="isbn" id="isbn" placeholder=""
-                        onkeyup="return validarLetras(this)"/>
+                        <input type="text"  name="isbn" id="isbn" placeholder="" pattern="[0-9]{10,13}" required title="Igresar ISBN de 10 a 13 dígitos" >
                         
                     </div>
                     <span id="mensajeNombres" class="error"></span>
@@ -58,8 +56,7 @@
                 <div class="formulario__grupo" id="grupo__apellidos">
                     <label style="color: black"  for="apellidos" class="formulario__label">Numero de Paginas</label>
                     <div class="formulario__grupo-input">
-                        <input type="text"  name="paginas" id="paginas" placeholder=""
-                        onkeyup="return validarApellidos(this)"/>
+                        <input type="text"  name="paginas" id="paginas" placeholder="" pattern="[0-9]+" required title="Solo se permiten números" >
                         
                     </div>
                     <span id="mensajeApellidos" class="error"></span>

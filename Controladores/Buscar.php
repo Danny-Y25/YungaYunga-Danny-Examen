@@ -19,13 +19,13 @@
 
  echo " <table style='width:100%','color: white'>
  <tr>
- <th>Nombre</th>
+ <th>Autor</th>
  <th>Nacionalidad</th>
  <th>Libro</th>
  <th>ISBN</th>
  <th>Num-Páginas</th>
- <th>Tipo</th>
- <th>Operadora</th>
+ <th>Capítulo</th>
+ <th>Nombre del Capítulo</th>
  <th></th>
  <th></th>
  <th></th>

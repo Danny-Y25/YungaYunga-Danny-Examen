@@ -34,10 +34,9 @@
             
                 <!-- Grupo: codigo -->
                 <div class="formulario__grupo" id="grupo__cedula">
-                    <label style="color: black" for="cedula" class="formulario__label">Numéro del Capítulo</label>
+                    <label style="color: black" for="cedula" class="formulario__label">Número del Capítulo</label>
                     <div class="formulario__grupo-input">
-                        <input type="text"  name="capitulo" id="capitulo" placeholder=""
-                        onkeyup="return validarCedula(this)"/>
+                        <input type="text"  name="capitulo" id="capitulo" placeholder="" pattern="[0-9]+" required title="Solo se permiten números" >
                     </div>
                     <span id="mensajeCedula" class="error"></span>
                     
@@ -48,8 +47,7 @@
                 <div class="formulario__grupo" id="grupo__nombre">
                     <label style="color: black" for="nombres" class="formulario__label">Título del Capítulo</label>
                     <div class="formulario__grupo-input">
-                        <input type="text"  name="titulo" id="titulo" placeholder=""
-                        onkeyup="return validarLetras(this)"/>
+                        <input type="text"  name="titulo" id="titulo" placeholder="" pattern="[A-Za-z0-9ñÑáéíóúÁÉÍÓÚ\s ]+" required >
                         
                     </div>
                     <span id="mensajeNombres" class="error"></span>
@@ -63,7 +61,7 @@
                     include "../Config/conexionBD.php";
                     $sql = "SELECT aut_nombre FROM autores";
                     //echo $sql;
-                    echo '<select name="nombreAutor" id="nombreAutor">';
+                    echo '<select name="nombreAutor" id="nombreAutor" required >';
                     echo '<option value=""> SELECCIONAR </option>';
                     //cambiar la consulta para puede buscar por ocurrencias de letras
                     $result = $conn->query($sql);
@@ -82,7 +80,8 @@
                  <br>       
                 <div id="nacion"> </div>
 
-                
+                <input type="hidden" id="isbn" name="isbn" value="<?php echo $isbn ?>" />
+
 
 
                 <br>
